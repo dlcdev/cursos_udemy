@@ -1,0 +1,25 @@
+{
+    "inventoryId": "YUJC78626",
+    "identifier": null,
+    "massive": {
+        "type": "PALLET_EACH",
+        "identifier": null,
+        "caseUnits": 1,
+        "totalCases": 0,
+        "unitMassivePallet": {
+            "id": "0fc58e29-99dc-44ab-9901-bf3f82b19097",
+            "layers": 0,
+            "casesPerLayer": 0,
+            "looseItems": 0
+        },
+        "layers": null,
+        "casesPerLayer": null,
+        "looseItems": null
+    },
+    "updatedAt": "2022-11-04T21:31:01.186992",
+    "id": "26b4b7d1-bac0-487c-87ed-1caacc0f6e2e",
+    "identifiers": [],
+    "quantity": 0,
+    "createdAt": "2022-11-04T21:31:01.186809",
+    "expirationDate": null
+}

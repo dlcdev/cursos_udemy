@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
+
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.http.HttpStatus.NO_CONTENT;
 
@@ -29,13 +31,13 @@ public class ClientController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Cliente savar(@RequestBody Cliente cliente) {
+    public Cliente savar(@Valid @RequestBody Cliente cliente) {
         return repository.save(cliente);
     }
 
     @GetMapping("/{id}")
     @ResponseStatus
-    public Cliente obterPorId(@PathVariable Integer id) {
+    public Cliente obterPorId(@Valid @PathVariable Integer id) {
         return getCliente(id);
     }
 
@@ -43,7 +45,7 @@ public class ClientController {
         return repository
                 .findById(id)
                 .orElseThrow(
-                        () -> new ResponseStatusException(NOT_FOUND)
+                        () -> new ResponseStatusException(NOT_FOUND, "cliente não encontrado")
                 );
     }
 
